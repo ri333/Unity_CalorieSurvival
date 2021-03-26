@@ -29,7 +29,7 @@ public class CountDownTimer : MonoBehaviour
         if (CountDownTime <= 0.0F) // 0.0秒以下になったら表示を0.0へ
         {
             CountDownTime = 0.0F;
-            FadeManager.Instance.LoadScene("Result", 0.3f);
+            FadeManager.Instance.LoadScene("Result", 0.3f); //フェードマネージャーのプレファブを必ずヒエラルキーに入れておく
             //SceneManager.LoadScene("Result");
         }
     }
