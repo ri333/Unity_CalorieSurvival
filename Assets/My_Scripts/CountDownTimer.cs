@@ -13,7 +13,7 @@ public class CountDownTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CountDownTime = 720.0F;    // 12分のカウントダウン(開始時間)
+        CountDownTime = 10.0f;    // 12分のカウントダウン(開始時間)
     }
     
     // Update is called once per frame
@@ -26,9 +26,9 @@ public class CountDownTimer : MonoBehaviour
 
         CountDownTime -= Time.deltaTime; // 開始時間から経過時間を引く
 
-        if (CountDownTime <= 0.0F) // 0.0秒以下になったら表示を0.0へ
+        if (CountDownTime <= 0.0f) // 0.0秒以下になったら表示を0.0へ
         {
-            CountDownTime = 0.0F;
+            CountDownTime = 0.0f;
             FadeManager.Instance.LoadScene("Result", 0.3f); //フェードマネージャーのプレファブを必ずヒエラルキーに入れておく
             //SceneManager.LoadScene("Result");
         }
